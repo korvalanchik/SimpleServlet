@@ -1,4 +1,16 @@
 GET http://localhost:8080/SimpleServlet-1/time;
 
 ###
+GET http://localhost:8080/SimpleServlet-1/time?timezone=UTC+3
+
+###
+GET http://localhost:8080/SimpleServlet-1/time?timezone=UTC-1
+
+###
+GET http://localhost:8080/SimpleServlet-1/time?timezone=UTC
+
+###
 GET http://localhost:8080/SimpleServlet-1/time?timezone=UTC+22
+
+###
+GET http://localhost:8080/SimpleServlet-1/time?timezone=

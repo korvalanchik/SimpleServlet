@@ -16,10 +16,11 @@ public class TimeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         ZoneId zone;
-        if(req.getParameter("timezone") != null) {
-            zone = ZoneId.of(req.getParameter("timezone").replace(" ", "+"));
-        } else {
+        String param = req.getParameter("timezone");
+        if(param == null || param == "") {
             zone = ZoneId.of("UTC");
+        } else {
+            zone = ZoneId.of(param.replace(" ", "+"));
         }
         ZonedDateTime timeZone = ZonedDateTime.now(zone);
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
@@ -28,8 +29,8 @@ public class TimeServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.println("<html><body>");
         out.println("<h2>It's now, at " + initTime + " " + zone + ", or never</h2>");
-        out.println("<h3>Value time zone from UTC-18:00 to UTC+18:00</h3>");
-        out.println("<form method=\"GET\" action=\"time\"><button>GET</button><input name=\"timezone\" value=\"UTC+3\"></form>");
+        out.println("<h3>Enter time zone from UTC-18 to UTC+18</h3>");
+        out.println("<form method=\"GET\" action=\"time\"><button>GET</button><input name=\"timezone\" value=\"UTC+2\"></form>");
         out.println("</body></html>");
         resp.getWriter().close();
     }
