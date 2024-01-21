@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <title>Dark zone</title>
+    <title>SimpleServet-1</title>
 </head>
 <body>
     <h1>
@@ -10,7 +10,7 @@
     </h1>
     <br/>
     <h2>
-        <a href="time">Let's go</a>
+        <a href="/time">Let's go</a>
     </h2>
 </body>
 </html>
