@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Dark zone</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
+<h1><%= "Welcome to Time Zone Management!" %>
 </h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+<a href="time">Let's go</a>
 </body>
 </html>
